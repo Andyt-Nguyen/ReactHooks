@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Form from './Form'
-import TodoItem from './TodoItem'
-import logo from '../logo.svg'
+import Form from '../Form'
+import TodoItemClass from './TodoItemClass'
 
 
 export default class TodoAppClass extends Component {
@@ -9,21 +8,23 @@ export default class TodoAppClass extends Component {
     super();
     this.state = {
       todos: [],
-      text: ''
+      text: '',
+      isEdit: false
     }
 
     this.onChangeText = this.onChangeText.bind(this)
     this.onSubmitForm = this.onSubmitForm.bind(this)
     this.onDelete = this.onDelete.bind(this)
+    this.onEdit = this.onEdit.bind(this)
   }
 
   componentDidMount() {
     this.setState({
       todos: [
-        {id:1, note: "Buy Milk"},
-        {id:2, note: "Walk Bently"},
-        {id:3, note: "Study C++"},
-        {id:4, note: "Study Java"},
+        {id:1, note: "Buy Milk", isEdit:false},
+        {id:2, note: "Walk Bently", isEdit:false},
+        {id:3, note: "Study C++", isEdit:false},
+        {id:4, note: "Study Java", isEdit:false}
       ]
     })
   }
@@ -31,10 +32,12 @@ export default class TodoAppClass extends Component {
   renderTodoItems() {
     return (
       this.state.todos.map( a => (
-        <TodoItem
+        <TodoItemClass
             key={a.id}
             id={a.id}
             note={a.note}
+            isEdit={a.isEdit}
+            onEditSub={this.onEdit}
             onDelete={() => this.onDelete(a.id)}
             />
         )
@@ -53,7 +56,9 @@ export default class TodoAppClass extends Component {
     this.setState({todos})
   }
 
-  onEdit() {
+  onEdit(e) {
+    e.preventDefault()
+    
     
   }
 

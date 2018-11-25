@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Form from './Form'
-import TodoItem from './TodoItem'
+import Form from '../Form'
+import TodoItemHook from './TodoItemHook'
 
 export default () => {
-    let [todos, setTodos] = useState([
-        {id:1, note: "Buy Milk"},
-        {id:2, note: "Walk Bently"},
-        {id:3, note: "Study C++"},
-        {id:4, note: "Study Java"}]);
+    let [todos, setTodos] = useState([])
     
     let [itemCounter, setItemCounter] = useState(0)
     let [textInput, setTextInput] = useState('')
@@ -23,13 +19,11 @@ export default () => {
 
     function renderTodos() {
         return todos.map( (a, index) => (
-            <TodoItem 
+            <TodoItemHook 
                 key={a.id}
-                id={a.id} 
-                note={a.note}
+                text={a.note}
                 onDelete={() => onDelete(a.id)}
-            />
-            )
+            />)
         )
     }
 

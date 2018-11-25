@@ -73,7 +73,9 @@ main {
 .editInput {
   font-size: 20px;
   border-radius: 5px;
+  height: 35px;
   border: 1px solid #ccc;
+  margin-left: 10px;
   
 }
 
