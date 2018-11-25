@@ -1,0 +1,95 @@
+.container {
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  min-height: 600px;
+}
+
+header {
+  margin: 30px 0;
+  padding: 20px;
+  /* border: 2px solid; */
+
+}
+
+main {
+  padding: 20px;
+}
+
+.todo_input {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  height: 100%;
+  font-size: 20px;
+  
+}
+
+.todo_input:focus {
+  outline: none;
+}
+
+.todoItems {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 88%;
+  margin: auto;
+}
+
+.todoItem {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
+  border: none;
+  font-size: 20px;
+  margin: 10px 0;
+  color: white;
+}
+.deleteBtn {
+  background: crimson;  
+}
+
+.editBtn {
+  background: lightsalmon;
+}
+
+.todoItemText {
+  padding-left: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.editInput {
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  
+}
+
+
+.todo_add_container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.cta {
+  background: dodgerblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  width: 100px;
+  height: 100%;
+}
