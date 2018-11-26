@@ -3,7 +3,12 @@ import Form from '../Form'
 import TodoItemHook from './TodoItemHook'
 
 export default () => {
-    let [todos, setTodos] = useState([])
+    let [todos, setTodos] = useState([
+        {id:1, note: "Buy Milk", isEdit:false},
+        {id:2, note: "Walk Bently", isEdit:false},
+        {id:3, note: "Study C++", isEdit:false},
+        {id:4, note: "Study Java", isEdit:false}
+    ])
     
     let [itemCounter, setItemCounter] = useState(0)
     let [textInput, setTextInput] = useState('')
